@@ -40,6 +40,7 @@
     
     XCUIElementQuery *clickableElementsQuery = [app.otherElements containingType:XCUIElementTypeButton identifier:@"Clickable"];
     [[clickableElementsQuery childrenMatchingType:XCUIElementTypeTextField].element tap];
+    sleep(2);
     [[clickableElementsQuery childrenMatchingType:XCUIElementTypeTextField].element typeText:(@"Fantastico")];
     [app.buttons[@"Clickable"] tap];
     
